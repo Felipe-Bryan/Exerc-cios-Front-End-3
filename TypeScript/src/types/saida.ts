@@ -2,7 +2,7 @@ interface Saida {
   id: number;
   valor: number;
   taxa: number;
-  data: number;
+  data: string;
   destinatario: string;
 }
 

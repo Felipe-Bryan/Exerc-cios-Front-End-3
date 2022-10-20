@@ -1,7 +1,7 @@
 interface Entrada {
   valor: number;
   id: number;
-  data: number;
+  data: string;
   remetente: string;
 }
 

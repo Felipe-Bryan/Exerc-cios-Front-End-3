@@ -12,11 +12,13 @@ let conta: Carteira = {
 
 function novaEntrada(valor: number, remetente: string): void {
   contadorEntradas++;
+  const data = new Date();
+  const dataBR = data.toLocaleString('pt-br');
 
   const entrada: Entrada = {
     id: contadorEntradas,
     valor: valor,
-    data: Date.now(),
+    data: dataBR,
     remetente: remetente,
   };
 
@@ -31,6 +33,8 @@ function novaEntrada(valor: number, remetente: string): void {
 function novaSaida(valor: number, destinatario: string): void {
   const saque: number = valor + taxa;
   const novoSaldo: number = conta.saldo - saque;
+  const data = new Date();
+  const dataBR = data.toLocaleString('pt-br');
 
   if (novoSaldo < 0) {
     console.log('-----------------------------------------------\n');
@@ -43,7 +47,7 @@ function novaSaida(valor: number, destinatario: string): void {
       id: contadorSaidas,
       taxa: taxa,
       valor: valor,
-      data: Date.now(),
+      data: dataBR,
       destinatario: destinatario,
     };
 

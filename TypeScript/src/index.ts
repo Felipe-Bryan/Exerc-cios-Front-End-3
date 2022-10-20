@@ -59,6 +59,7 @@ function novaSaida(valor: number, destinatario: string): void {
   }
 }
 
+// Linhas de teste  ----------------------------------------------------
 novaEntrada(2000, 'Pagamento');
 novaEntrada(100, 'Devolução');
 novaSaida(2500, 'Energia'); // Falha - saldo insuficiente
